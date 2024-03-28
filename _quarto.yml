@@ -1,0 +1,26 @@
+project:
+  type: book
+  pre-render: pre_render_script.R
+  post-render: post_render_script.R
+  output-dir: docs
+
+book:
+  title: "GSoC '24 Test"
+  author: "Quynh Nguyen"
+  date: "3/27/2024"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - q2.qmd 
+    - q3.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: minty
+  pdf:
+    documentclass: scrreprt
+
+editor: visual
+

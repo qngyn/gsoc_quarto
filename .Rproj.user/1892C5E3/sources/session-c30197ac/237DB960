@@ -1,0 +1,32 @@
+{
+    "id": "237DB960",
+    "path": "~/Documents/GSoC'24/q2.qmd",
+    "project_path": "q2.qmd",
+    "type": "quarto_markdown",
+    "hash": "2780675733",
+    "contents": "",
+    "dirty": false,
+    "created": 1711560636532.0,
+    "source_on_save": false,
+    "relative_order": 6,
+    "properties": {
+        "rmdVisualMode": "true",
+        "rmdVisualWrapConfigured": "true",
+        "tempName": "Untitled1",
+        "source_window_id": "",
+        "Source": "Source",
+        "docOutlineVisible": "1",
+        "rmdVisualCollapsedChunks": "",
+        "cursorPosition": "7,0",
+        "scrollLine": "0",
+        "rmdVisualModeLocation": "89:0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1711589657,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1711589657856,
+    "read_only": false,
+    "read_only_alternatives": []
+}

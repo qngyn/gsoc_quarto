@@ -1,0 +1,50 @@
+---
+title: "Question 2"
+author: "Quynh Nguyen"
+date: "2024-03-27"
+output: html_document
+---
+
+```{convert_quarto_to_audio <- function(quarto_file_path, output_folder, api_key, language = "en-us", sample_rate = "44khz_16bit_stereo") {}
+  # Load required libraries
+  library(httr)
+  
+  # Read Quarto file
+  quarto_content <- readLines(quarto_file_path)
+  
+  # Extract text content from chapters
+  chapters <- grep("^##\\s+", quarto_content, value = TRUE)
+  
+  # Iterate through chapters and convert text to speech
+  for (i in seq_along(chapters)) {
+    # Extract chapter content
+    chapter_title <- chapters[i]
+    chapter_start_index <- grep(chapter_title, quarto_content)
+    if (i < length(chapters)) {
+      chapter_end_index <- grep(chapters[i + 1], quarto_content) - 1
+    } else {
+      chapter_end_index <- length(quarto_content)
+    }
+    chapter_content <- quarto_content[(chapter_start_index + 1):chapter_end_index]
+    chapter_text <- paste(chapter_content, collapse = " ")
+    
+    # Call Text-to-Speech API
+    endpoint <- "http://api.voicerss.org/"
+    params <- list(key = api_key, src = chapter_text, hl = language, c = "MP3", f = sample_rate)
+    response <- POST(endpoint, body = params)
+    
+    # Save audio file
+    if (!http_error(response)) {
+      filename <- paste0(output_folder, "/chapter_", sprintf("%02d", i), ".mp3")
+      writeBin(content(response, "raw"), filename)
+      cat("Audio file saved:", filename, "\n")
+    } else {
+      warning("Error converting chapter to audio:", chapter_title)
+    }
+  }
+}
+
+# Test cases
+convert_quarto_to_audio("intro.quarto", "audio_output", "7634fb7204ef42af94324588155a32d7")
+
+```
