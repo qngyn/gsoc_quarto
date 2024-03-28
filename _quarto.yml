@@ -1,18 +1,20 @@
 project:
-  type: book
+  type: website
   pre-render: pre_render_script.R
   post-render: post_render_script.R
   output-dir: docs
 
-book:
+website:
   title: "GSoC '24 Test"
-  author: "Quynh Nguyen"
-  date: "3/27/2024"
-  chapters:
-    - index.qmd
-    - intro.qmd
-    - q2.qmd 
-    - q3.qmd
+  navbar:
+    left:
+    - href: intro.qmd
+      text: Introduction
+    - href: q2.qmd
+      text: Question 2
+    - href: q3.qmd
+      text: Question 3
+    
 
 bibliography: references.bib
 

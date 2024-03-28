@@ -1,14 +1,14 @@
 # Preface
 
-This is the Quarto Book dedicates for my application to Audiobooks for quaro as part of Google Summer of Code 2024.
+This is the Quarto Book dedicates for my application to Audiobooks for Quarto as part of Google Summer of Code 2024.
 
 This includes the following parts:
 
 ## Table of Contents:
 
-1.  [Introduction](#intro.qmd): A Short Introduction About me
-2.  [Test 2](#q2.qmd):A quick review of function how I solve the second challenge
-3.  [Test3](#q3.qmd): A quick review of function how I solve the third challenge
+1.  [Introduction](intro.qmd): A Short Introduction About me
+2.  [Test2](q2.qmd): A quick review of function how I solve the second challenge
+3.  [Test3](q3.qmd): A quick review of function how I solve the third challenge
 
 ```         
 ```
